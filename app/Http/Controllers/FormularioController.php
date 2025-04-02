@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Reporte;
+use App\Models\GeoJSON;
+
 
 class FormularioController extends Controller
 {
