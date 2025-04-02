@@ -30,7 +30,7 @@
             <div class="search-container">
                 <input class="controls" type="text" id="searchBox" placeholder="Buscar dirección o lugar...">
                 <button type="button" id="searchButton">Buscar</button>
-            </div>
+            </div>  
 
             <input class="controls" type="text" name="latitud" id="lati" placeholder="Latitud" readonly>
             <input class="controls" type="text" name="longitud" id="long" placeholder="Longitud" readonly>
