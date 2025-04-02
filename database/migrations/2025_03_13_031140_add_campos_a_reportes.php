@@ -10,14 +10,23 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up()
-{
-    Schema::table('reportes', function (Blueprint $table) {
-        $table->string('latitud');
-        $table->string('longitud');
-        $table->string('opciones');
-        $table->string('municipio');
-    });
-}
+    {
+        Schema::table('reportes', function (Blueprint $table) {
+            if (!Schema::hasColumn('reportes', 'latitud')) {
+                $table->string('latitud');
+            }
+            if (!Schema::hasColumn('reportes', 'longitud')) {
+                $table->string('longitud');
+            }
+            if (!Schema::hasColumn('reportes', 'opciones')) {
+                $table->string('opciones');
+            }
+            if (!Schema::hasColumn('reportes', 'municipio')) {
+                $table->string('municipio');
+            }
+        });
+    }
+    
 
 public function down()
 {
